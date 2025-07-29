@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rolling Numbers</title>
+</head>
+
+<style>
+    
+body{
+    font-family: Verdana;
+    text-align: center;
+    color: seagreen;
+}
+
+#button{
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 6px;
+    background-color: silver;
+}
+
+#myLabel{
+    font-size: 3em;
+}
+
+
+
+</style>
+
+<body>
+    <button id="Button">Roll</button><br><br>
+    <label id="myLabel"></label>
+    
+<script>
+
+const Button = document.getElementById("Button");
+const myLabel = document.getElementById("myLabel");
+const min = 1;
+const max = 100;
+let randomNum
+
+Button.onclick = function(){
+    randomNum = Math.floor(Math.random() * max) + min;
+    myLabel.textContent = randomNum
+}
+
+</script>
+</body>
+</html>
